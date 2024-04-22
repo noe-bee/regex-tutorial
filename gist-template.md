@@ -1,10 +1,16 @@
-# Title (replace with your title)
+# Regex Tutorial on Matching a Hex Value
 
-Introductory paragraph (replace this with your text)
+What is regex? Well, if you are new to coding, you might see this strange word pretty often. Regex stands for "regular expression", but this name is also somewhat misleading since it is not the tradional "expression" you might be thinking of. In fact, regular expressions look like daunting, random characters clustered together with no apparent meaning. Regardless of their seemingly odd look, regular expressions are actually a pattern of characters that do have a purpose and can actually be quite useful when trying to conduct a search for a specific value when you need it.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+I will be providing a breakdown on a regular expression on a value that you might have seen before at least once in your lifetime-the hex value. 
+<br>
+<strong>Hex Value Regex:</strong> `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
+</br>
+Commonly used when websites allow the liberty to personalize your profile or account, a hex value is a useful string when you want to identify a unique color. That being said, I will now breakdown the various concepts being used in this regex such as anchors, grouping constructs, quantifiers, and bracket expressions
+
+
 
 ## Table of Contents
 
@@ -12,10 +18,7 @@ Briefly summarize the regex you will be describing and what you will explain. In
 - [Quantifiers](#quantifiers)
 - [Grouping Constructs](#grouping-constructs)
 - [Bracket Expressions](#bracket-expressions)
-- [Character Classes](#character-classes)
 - [The OR Operator](#the-or-operator)
-- [Flags](#flags)
-- [Character Escapes](#character-escapes)
 
 ## Regex Components
 
