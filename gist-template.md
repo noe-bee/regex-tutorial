@@ -33,16 +33,18 @@ Bracket expressions are anything wrapped inside brackets: `[]`. In our example, 
 
 ### Quantifiers
 
-In the previous section, I mentioned about the two bracket expressions present that held the same value. Although almost the same, their difference in value is dependent on what is grouped next to them, `{6}` and `{3}`. These are called <strong>quanitifiers</strong>. Quantifiers tell the regex it will be looking for a match of either a possible combination of 6 or 3 of the following bracket expression `[a-f0-9]`. Again, this specifies the range from the lowercase letters a-f and numbers 0-9.
+In the previous section, I mentioned about the two bracket expressions present that held the same value. Although almost the same, their difference in value is dependent on what is grouped next to them (`{6}` and `{3}`). These are called <strong>quanitifiers</strong>. These quantifiers tell the regex it will be looking for a match of either a possible combination of 6 or 3 of the following bracket expression `[a-f0-9]`. Again, this bracket expression specifies a match ranging from the lowercase letters a-f and numbers 0-9.
+
+There is also one more character that can be classified as a quanitfier in our regex example. The other quantifer you see is given by the question mark `?` after the hashtag `#` in the beginning of the expression. The `?` quantifier, which is technically considered a <strong>greedy</strong> quanitfier, means that the preceding element (#) will need to be matched either 0 or 1 times.
 
 ### Grouping Constructs
 
-
-### Character Classes
+Grouping constructs exist in our regex example and are usually bound within a pair of parenthesis `()`. So, in our case, our grouping construct currently looks like the following: `([a-f0-9]{6}|[a-f0-9]{3})`. The main purpose of having a grouping construct is to let the regex know it will be searching for an <strong>exact</strong> match. Now what does this mean for our particular example? Well, it simply means the regex is looking for an exact match of a string of either 6 or 3 alphanumeric characters with the specifications given within the bracket expressions.
 
 ### The OR Operator
 
+Lastly, I will meantion the OR operator in the regex which is specificied with the `|` symbol. Now let's take a look at our whole regex again-`/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`. The OR operator, if you haven't noticed, is right in between our two bracket expressions `[a-f0-9]`. Using what I explained in the previous sections, the purpose of the OR operator should be a bit easier to guess now. If you still weren't able to guess it, then no worries! It really is just there to tell the regex it wants to find a string match containing 6 alphanumeric characters OR 3 alphanumeric characters.
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Thank you for reading my gist. My name is Noelia and I am a new full-stack developer. Please check out my other repos on my page at: https://github.com/noe-bee
